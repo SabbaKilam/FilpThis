@@ -18,8 +18,14 @@ var events =  [  "load",    "keyup",    "change",      "keydown"];
 var handlers =[    init,     search,      search,       showNext];
 _forTripletArrays(objects, events, handlers, function(anObject, anEvent, aHandler){
 	objectEventHandler( anObject, anEvent, aHandler );
-    //attachEventHandler( anObject, anEvent, aHandler );
-}); 
+});
+//=================================================
+objects  = [o("f"), o("r"),  o("rs"), o("fs"), o("btnClear") ];
+events =   ["click","click", "click", "click", "click"];
+handlers = [forward,reverse,reverseStop,forwardStop,clearSearch];
+_forTripletArrays(objects, events, handlers, function(anObject, anEvent, aHandler){
+	objectEventHandler( anObject, anEvent, aHandler );
+});
 //==============================================
 var actionFields = ["homeMail","schoolMail","homePhone","cellPhone","workPhone","otherPhone"];
 forAll( actionFields, function( field ) {
@@ -27,12 +33,7 @@ forAll( actionFields, function( field ) {
     objectEventHandler(o(field), "mouseout", function() { highlight(field); } );
     objectEventHandler(o(field), "click", function() { emailOrCall(field); } );     
 });
-//=================================================
-var buttons  = ["f"    ,"r"    ,"rs"       ,"fs"       ,"btnClear" ];
-var handlers = [forward,reverse,reverseStop,forwardStop,clearSearch];
-forTwinArrays(buttons, handlers, function(button,handler){
-    objectEventHandler(o(button), "click", handler);
-});
+
 //==============Forward Button Handler=============
 function forward(){
     if ( notTooFar() ) pointToNextRecord();
