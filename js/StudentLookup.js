@@ -1,3 +1,7 @@
+// extra jq stuff
+//========================================
+
+
 //==============DATA=======================
 var infoFields = ["major","lastName","firstName","3","4","5","homeMail","schoolMail","homePhone","cellPhone" ,"workPhone","otherPhone"]
 var ajax = new HttpObject()
