@@ -35,16 +35,15 @@
  
 </head>
 <body>
- 
-<div data-role="main" class="ui-content" align="center">
-  <div data-role="header">
-    <h1>Computer Students</h1>
-  </div>
+  <div data-role="main" class="ui-content" align="center">
+ 	<div id="flip" class="container">
+
+  <div data-role="header"><h1>Computer Students</h1></div>
+  <div id="flip" class="container">
   <article class="myBox">
       <span id="div1" style="font-weight:bold; color:white"><br><br>
-       <center>Student <span id='c'>0</span> of <span id='m'>0</span></center></span>
-        <div class="table">
-            <table>
+       <center>Student <span id='c'>0</span> of <span id='m'>0</span></center></span>      
+           <table>
                 <tbody>               
                     <tr><td>Major </td><td><input id="major" readonly size="20"></td></tr> 
                     <tr><td>Home Email </td><td><input id="homeMail" readonly size="20"></td></tr>
@@ -56,9 +55,8 @@
                     <tr><td><strong>First Name</strong> </td><td><input id="firstName" readonly size="20"></td></tr>
                     <tr><td><strong>Last Name</strong> </td><td><input id="lastName" readonly size="20"></td></tr>
                 </tbody>
-            </table>
-          </div> 
-          <div class="controls">
+            </table> 
+            <div class="controls">
             <br>
             <img id="rs" src="img/rs.png" width="30" height="30" style="cursor: pointer;">
              &nbsp;&nbsp;&nbsp;
@@ -75,11 +73,34 @@
             <br><span style="color: white">Search:&nbsp;</span><input id="match" type="text">
             </strong>
             <br><br>
-            <input type="button" id="btnClear" value="Clear Search">
+            &nbsp;&nbsp;&nbsp;<input type="button" id="btnClear" value="Clear Search" style="cursor: pointer">
           </div>  
   </article>
   </div>
+  </div>
+    </div>
 </body>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!--
+<script>				
+  var $container 	= $( '#flip' ),
+    //$pages		= $container.children().hide();
+  
+  Modernizr.load({
+    test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+    yep : ['js/jquery.tmpl.min.js','js/jquery.history.js','js/core.string.js','js/jquery.touchSwipe-1.2.5.js','js/jquery.flips.js'],
+    nope: 'css/fallback.css',
+    callback : function( url, result, key ) {
+      
+      if( url === 'css/fallback.css' ) {
+        $pages.show();
+      }
+      else if( url === 'js/jquery.flips.js' ) {
+        $container.flips();
+      }
+    }
+  });				
+</script>
+-->
 <script src="js/StudentLookup.js"></script>
 </html>
