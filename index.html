@@ -11,16 +11,14 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <style>
-      #match{
-        padding: 0 50px;
-      }
+
     </style>
 </head>
 <body>
-  <div align="center">
+  <div align="center" style="min-height: 100%;">
   <div data-role="header"  data-theme="b">
   <h1>Computer Students</h1>
-  <article class="myBox">
+  <article class="myBox" style="min-height: 100%;" >
       <span id="div1" style="font-weight:bold; color:white"><br><br>
        <center>Student <span id='c'>0</span> of <span id='m'>0</span></center></span>      
            <table>
@@ -36,7 +34,7 @@
                     <tr><td><strong>Last Name</strong> </td><td><input id="lastName" readonly size="20" style="font-weight: bold;"></td></tr>
                 </tbody>
             </table> 
-            <div class="controls">
+            <div class="controls" style="min-height: 100%">
             <br>
             <img id="rs" src="img/rs.png" width="30" height="30" style="cursor: pointer;">
              &nbsp;&nbsp;&nbsp;
@@ -54,10 +52,9 @@
             </strong>
             <br>
             &nbsp;&nbsp;<input type="button" id="btnClear" value="Clear Search" style="cursor: pointer;">
+            <br><br><br><br>
           </div>  
   </article>
-  </div>
-  </div>
   </div>
   </div>
 </body>
