@@ -4,42 +4,22 @@
     <meta charset = "utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">     
-    <title>Computer Students Info</title>
-    
-    <link rel="stylesheet" href="css/css.css" >
-    <script src="js/o.js"></script>
-    
+    <title>Computer Students Info</title>    
+   
     <!-- jq stuff, etc. -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/modernizr.custom.08464.js"></script>
-		<script id="pageTmpl" type="text/x-jquery-tmpl">
-			<div class="${theClass}" style="${theStyle}">
-				<div class="front">
-					<div class="outer">
-						<div class="content" style="${theContentStyleFront}">
-							<div class="inner">{{html theContentFront}}</div>
-						</div>
-					</div>
-				</div>
-				<div class="back">
-					<div class="outer">
-						<div class="content" style="${theContentStyleBack}">
-							<div class="inner">{{html theContentBack}}</div>
-						</div>
-					</div>
-				</div>
-			</div>			
-		</script>
- 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <style>
+      #match{
+        padding: 0 50px;
+      }
+    </style>
 </head>
 <body>
-  <div data-role="main" class="ui-content" align="center">
- 	<div id="flip" class="container">
-
-  <div data-role="header"><h1>Computer Students</h1></div>
-  <div id="flip" class="container">
+  <div align="center">
+  <div data-role="header"  data-theme="b">
+  <h1>Computer Students</h1>
   <article class="myBox">
       <span id="div1" style="font-weight:bold; color:white"><br><br>
        <center>Student <span id='c'>0</span> of <span id='m'>0</span></center></span>      
@@ -52,8 +32,8 @@
                     <tr><td>Cell Phone </td><td><input id="cellPhone" readonly size="20"></td></tr>
                     <tr><td>Work Phone </td><td><input id="workPhone" readonly size="20"></td></tr>
                     <tr><td>Other Phone </td><td><input id="otherPhone" readonly size="20"></td></tr>
-                    <tr><td><strong>First Name</strong> </td><td><input id="firstName" readonly size="20"></td></tr>
-                    <tr><td><strong>Last Name</strong> </td><td><input id="lastName" readonly size="20"></td></tr>
+                    <tr><td><strong>First Name</strong> </td><td><input id="firstName" readonly size="20" style="font-weight: bold;"></td></tr>
+                    <tr><td><strong>Last Name</strong> </td><td><input id="lastName" readonly size="20" style="font-weight: bold;"></td></tr>
                 </tbody>
             </table> 
             <div class="controls">
@@ -70,37 +50,18 @@
             &nbsp;&nbsp;&nbsp;
             <img id="fs" src="img/fs.png" width="30" height="30" style="cursor: pointer;">
             <strong>
-            <br><span style="color: white">Search:&nbsp;</span><input id="match" type="text">
+            <br><br><span style="color: white">Type Search String Below:&nbsp;</span><input id="match" type="text" style="margin: 0 30px; max-width: 65%; text-align: center;";>
             </strong>
-            <br><br>
-            &nbsp;&nbsp;&nbsp;<input type="button" id="btnClear" value="Clear Search" style="cursor: pointer">
+            <br>
+            &nbsp;&nbsp;<input type="button" id="btnClear" value="Clear Search" style="cursor: pointer;">
           </div>  
   </article>
   </div>
   </div>
-    </div>
+  </div>
+  </div>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<!--
-<script>				
-  var $container 	= $( '#flip' ),
-    //$pages		= $container.children().hide();
-  
-  Modernizr.load({
-    test: Modernizr.csstransforms3d && Modernizr.csstransitions,
-    yep : ['js/jquery.tmpl.min.js','js/jquery.history.js','js/core.string.js','js/jquery.touchSwipe-1.2.5.js','js/jquery.flips.js'],
-    nope: 'css/fallback.css',
-    callback : function( url, result, key ) {
-      
-      if( url === 'css/fallback.css' ) {
-        $pages.show();
-      }
-      else if( url === 'js/jquery.flips.js' ) {
-        $container.flips();
-      }
-    }
-  });				
-</script>
--->
+<!-- =============================== MY Stuff    ===================================== -->
+<script src="js/o.js"></script>
 <script src="js/StudentLookup.js"></script>
 </html>
