@@ -17,6 +17,20 @@ var ajax = new HttpObject()
 , currentMatch = ""
 ;
 //=================Event Handlers===============
+$(function(){
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $( "#swipeRegion" ).on( "swiperight", function(){
+    forward();
+  });                       
+});
+//-----------------
+$(function(){
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $( "#swipeRegion" ).on( "swipeleft", function(){
+    reverse();
+  });                       
+});
+//===============================================
 var objects = [  window, o("match"),  o("match"),  document.body];
 var events =  [  "load",    "keyup",    "change",      "keydown"];
 var handlers =[    init,     search,      search,       showNext];
