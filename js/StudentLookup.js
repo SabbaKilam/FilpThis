@@ -20,14 +20,14 @@ var ajax = new HttpObject()
 $(function(){
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $( "#swipeRegion" ).on( "swiperight", function(){
-    forward();
+    reverse();
   });                       
 });
 //-----------------
 $(function(){
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $( "#swipeRegion" ).on( "swipeleft", function(){
-    reverse();
+    forward();
   });                       
 });
 //===============================================

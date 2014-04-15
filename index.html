@@ -20,7 +20,7 @@
     <h1>Computer Students</h1>
     <article class="myBox" style="min-height: 100%;" >
       <span id="div1" style="font-weight:bold; color:white"><br><br>
-            <div id="swipeRegion" style="width: 100%;">
+                <a href="#flip" data-transition="turn" style="text-decoration: none;"><div id="swipeRegion" style="width: 100%;">
               <div data-role="main" class="ui-content">
             <center>Student <span id='c'>0</span> of <span id='m'>0</span></center></span>      
             <table>
@@ -35,11 +35,11 @@
                       <tr><td><strong>First Name</strong> </td><td><input id="firstName" readonly size="20" style="font-weight: bold;"></td></tr>
                       <tr><td><strong>Last Name</strong> </td><td><input id="lastName" readonly size="20" style="font-weight: bold;"></td></tr>
                   </tbody>
-              </table> 
+              </table>
+                </a>
               </div>
               </div>
             <div class="controls" style="min-height: 100%">
-            <br>
             <img id="rs" src="img/rs.png" width="30" height="30" style="cursor: pointer;">
              &nbsp;&nbsp;&nbsp;
             <img id="r" src="img/b.png" width="30" height="30" style="cursor: pointer;">          
@@ -52,7 +52,9 @@
             &nbsp;&nbsp;&nbsp;
             <img id="fs" src="img/fs.png" width="30" height="30" style="cursor: pointer;">
             <strong>
-            <br><br><span style="color: white">&darr;&nbsp;&nbsp;Type Search String Below&nbsp;&nbsp;&darr;</span><input id="match" type="text" style="margin: 0 30px; max-width: 65%; text-align: center;";>
+            <br><br><span style="color: white">&darr;&nbsp;&nbsp;Type Search String Below&nbsp;&nbsp;&darr;</span>
+            <br>
+            <input id="match" type="text" style="margin: 0 30px; max-width: 65%; text-align: center;";>
             </strong>
             <br>
             &nbsp;&nbsp;<input type="button" id="btnClear" value="Clear Search" style="cursor: pointer;">
