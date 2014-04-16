@@ -2,69 +2,68 @@
 <html> 
 <head>
     <meta charset = "utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">     
-    <title>Computer Students Info</title>    
-   
+    <title>Computer Students Info</title>
+    <link rel="stylesheet" href="css/StudentLookup.css" >
+
     <!-- jq stuff, etc. -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    <style>
-
-    </style>
+   
 </head>
 <body>
-  <div align="center" style="min-height: 100%;">
-  <div data-role="header"  data-theme="b"  >
-    <h1>Computer Students</h1>
-    <article class="myBox" style="min-height: 100%;" >
-      <span id="div1" style="font-weight:bold; color:white"><br><br>
-                <a href="#flip" data-transition="turn" style="text-decoration: none;"><div id="swipeRegion" style="width: 100%;">
-              <div data-role="main" class="ui-content">
-            <center>Student <span id='c'>0</span> of <span id='m'>0</span></center></span>      
-            <table>
-                  <tbody>               
-                      <tr><td>Major </td><td><input id="major" readonly size="20"></td></tr> 
-                      <tr><td>Home Email </td><td><input id="homeMail" readonly size="20"></td></tr>
-                      <tr><td>School Email &nbsp;&nbsp;</td><td><input id="schoolMail" readonly size="20"></td></tr>
-                      <tr><td>Home Phone </td><td><input id="homePhone" readonly size="20"></td></tr>
-                      <tr><td>Cell Phone </td><td><input id="cellPhone" readonly size="20"></td></tr>
-                      <tr><td>Work Phone </td><td><input id="workPhone" readonly size="20"></td></tr>
-                      <tr><td>Other Phone </td><td><input id="otherPhone" readonly size="20"></td></tr>
-                      <tr><td><strong>First Name</strong> </td><td><input id="firstName" readonly size="20" style="font-weight: bold;"></td></tr>
-                      <tr><td><strong>Last Name</strong> </td><td><input id="lastName" readonly size="20" style="font-weight: bold;"></td></tr>
-                  </tbody>
-              </table>
-                </a>
-              </div>
-              </div>
-            <div class="controls" style="min-height: 100%">
+<br>
+<article class="box">
+    <div id="topInfo">
+        <p><span id="div1">Computer Students</p>
+        <p>Student <span id='c'>0</span> of <span id='m'>0</span></span></p>
+    </div>
+     <div id="swipeRegion">
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong>Last Name</strong>
+                    <td><input id="lastName" readonly size="20">  
+                <tr>
+                    <td><strong>First Name</strong>
+                    <td><input id="firstName" readonly size="20">               
+                <tr>
+                    <td>Home Email
+                    <td><input id="homeMail" readonly size="20">
+                <tr>
+                    <td>School Email &nbsp;&nbsp;
+                    <td><input id="schoolMail" readonly size="20">
+                <tr>
+                    <td>Home Phone
+                    <td><input id="homePhone" readonly size="20">
+                <tr>
+                    <td>Cell Phone
+                    <td><input id="cellPhone" readonly size="20">
+            </tbody>
+        </table>
+        </div>
+        <div id="nav">
             <img id="rs" src="img/rs.png" width="30" height="30" style="cursor: pointer;">
              &nbsp;&nbsp;&nbsp;
-            <img id="r" src="img/b.png" width="30" height="30" style="cursor: pointer;">          
+            <img id="r" src="img/b.png" width="30" height="30" style="cursor: pointer;">
+            
             <span style="font-weight:bold; color:white"><strong>
                 <span id='matchIndex' >0</span> of <span id='matchCount' style="color: orange;">0</span>
                 <span>&nbsp;</span>
                 <span id="sp"  >matches</span>
-            </strong></span>          
+            </strong></span>
+            
             <img id="f" src="img/f.png" width="30" height="30" style="cursor: pointer;">
             &nbsp;&nbsp;&nbsp;
             <img id="fs" src="img/fs.png" width="30" height="30" style="cursor: pointer;">
-            <strong>
-            <br><br><span style="color: white">&darr;&nbsp;&nbsp;Type Search String Below&nbsp;&nbsp;&darr;</span>
-            <br>
-            <input id="match" type="text" style="margin: 0 30px; max-width: 65%; text-align: center;";>
-            </strong>
-            <br>
-            &nbsp;&nbsp;<input type="button" id="btnClear" value="Clear Search" style="cursor: pointer;">
-            <br><br><br>
-          </div>  
-  </article>
-  </div>
-  </div>
+        </div>
+        <div id="search">
+            <span style="color: white">Search:&nbsp;</span>
+            <input id="match" type="text">
+            <button id="btnClear" >&nbsp;Clear Search</button>
+        </div>    
+            
+</article>
+    <script src="js/o.js"></script>
+    <script src="js/StudentLookup.js"></script>
 </body>
-<!-- =============================== MY Stuff    ===================================== -->
-<script src="js/o.js"></script>
-<script src="js/StudentLookup.js"></script>
 </html>
