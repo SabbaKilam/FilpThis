@@ -1,7 +1,7 @@
 $(document).ready(function(){
   //==============DATA=======================
   //Lname,Fname,HomeEmail,SchoolEmail,HomePhone,CellPhone
-  var infoFields = ["lastName", "firstName", "homeMail", "schoolMail", "homePhone", "cellPhone"]
+  var infoFields = ["lastName", "firstName", "homeMail", "cellPhone"]
   var ajax = new HttpObject()
   , records = []
   , recordCount = 0
@@ -37,7 +37,7 @@ $(document).ready(function(){
       //attachEventHandler( anObject, anEvent, aHandler );
   }); 
   //==============================================
-  var actionFields = ["homeMail","schoolMail","homePhone","cellPhone"];
+  var actionFields = ["homeMail","cellPhone"];
   forAll( actionFields, function( field ) {
       objectEventHandler(o(field), "mouseover", function() { highlight(field); } ); 
       objectEventHandler(o(field), "mouseout", function() { highlight(field); } );
@@ -270,8 +270,6 @@ $(document).ready(function(){
   function init(){
       o("match").focus();
       ajax.open("GET", "https://dl.dropboxusercontent.com/u/21142484/StudentNames/ComputerStudents.csv", true );
-      //https://dl.dropboxusercontent.com/u/21142484/StudentNames/ComputerStudents.csv
-      //https://dl.dropbox.com/u/21142484/StudentNames/ComputerStudents.csv
       ajax.onreadystatechange = function() {
           if ( ajax.readyState == 4 ){
               if ( ajax.status == 200 || ajax.status == 0 ){

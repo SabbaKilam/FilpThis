@@ -1,9 +1,12 @@
+body{
+    background-color: #6F839C;
+    text-align: center;
+}
+
 input{
     font-weight: bold;
     #background-color: #ccffff;
-}
-body{
-    background-color: #6F839C;
+
 }
 table{
     #font-weight: bold;
@@ -19,9 +22,9 @@ fieldset{
     margin: 0 auto;    
 }
 
-.box *{
+.box table{
     margin: 0 auto; 
-    text-align: left;
+    text-align: center;
 }
 button {
     margin-left: 0;
@@ -53,13 +56,13 @@ img {
     margin-right: 40px;
 } 
 #topInfo p{
-    width: 200px;
+    width: 300px;
+    margin: 0 auto;    
     color: white;
     font-size: 0.9em;
     font-weight: bold;
     font-family: sans-serif;
-    padding: 5px;
-    margin: 0 auto;
+    #padding: 5px;
 }
 
 #firstname, #lastname {
